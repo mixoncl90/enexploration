@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>EN KEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EN KEY a better way to enter your home">
+<meta name="author" content="CeDerrick Mixon">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css"> 
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+	<title>EN | Home</title>
+</head>
+<body>
+
+<div id="page">
+	<main class="main">
+	<header class="topnav">
+		<div class="container">
+			<div id="logo"> <img src=""></div>
+		</div>
+	</header><!--End of TopNav-->
+	<nav class="secondarynav">
+		<div id="menu">
+			<ul>
+				<li>Home</li>
+				<li>Automobile</li>
+				<li>Office</li>
+				<li>Room</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="content">
+		<section class="overview">
+			<div class="overview-icon">
+			</div><!--End of Main Icon-->
+			<div id="text" class="overview-text">
+				<img src=""><!--Overview Icon-->
+				<p> 
+				<div id="GeoLocation"></div>
+					10303 Brixworth Pl  Brookhaven, GA 30319
+				</p>
+				<h3><span class="">1</span> Home <span>3</span> Out</h3>
+			</div>
+			<button id="lock-unlock"><img src=""></button>
+		</section><!--End of Section-->
+		<button id="newedition">
+			<img src="">
+		</button><!--End of New Edtion Button-->
+		<section class="guestlist">
+			<div id="title-guestlist">
+				<h3>Guestlist</h3>
+				<div class="ellipsis"><img src=""></div>
+			</div>
+			<div id="line-items-container">
+				<div class="line-item">
+					<img src="">
+					<div class="line-item-text">
+						<h2>Matthew Morrison</h2>
+						<p>(555) 555 5555</p>
+						<p>mmorrison93@gmail.com</p>
+						<spam>Exp: 11.01.16</spam>
+					</div>
+				</div>
+			</div>
+		</section><!--End of Guestlist Container-->
+	</div><!--End of Content-->
+	<header class="bottomnav">
+		<div id="bottomnav-container">
+			<div class="menuicon"> <img src=""></div>
+			<div class="menuicon"> <img src=""></div>
+			<div class="menuicon"> <img src=""></div>
+			<div class="menuicon"> <img src=""></div>
+		</div>
+	</header><!--End of BottomNav-->
+
+	</main><!--End of Main-->
+</div><!--End of Page-->
+
+</body>
+
+
+<!--JS-->
+<script>
+var x = document.getElementById("GeoLocation");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
+</html>
